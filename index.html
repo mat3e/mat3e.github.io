@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>DORF by mat3e</title>
+    <title>mat3e by mat3e</title>
 
     <link rel="stylesheet" href="stylesheets/styles.css">
     <link rel="stylesheet" href="stylesheets/github-light.css">
@@ -15,8 +15,8 @@
   <body>
     <div class="wrapper">
       <header>
-        <h1>DORF</h1>
-        <p>Domain Object Reactive Forms for Angular 2 and TypeScript</p>
+        <h1>mat3e</h1>
+        <p>Programmer and IT Designer</p>
 
 
         <p class="view"><a href="https://github.com/mat3e">View My GitHub Profile</a></p>
@@ -24,53 +24,15 @@
       </header>
       <section>
         <h2>
-<a id="domain-objec-reactive-forms" class="anchor" href="#domain-objec-reactive-forms" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Domain Objec Reactive Forms</h2>
+<a id="mat3es-github-pages-repo" class="anchor" href="#mat3es-github-pages-repo" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>mat3e's github pages repo</h2>
 
-<p>Angular 2 gives a great support for creating <a href="https://angular.io/docs/ts/latest/cookbook/dynamic-form.html">Reactive Forms</a>, which are sometimes called also <em>Dynamic</em> or <em>Model-driven Forms</em>.</p>
+<p>This repository is used to host websites available at <a href="http://mat3e.github.io">http://mat3e.github.io</a>.</p>
 
-<p>This library is about taking <em>Reactive Forms</em> to the next level by coupling them with <em>Domain Objects</em>.</p>
-
-<h3>
-<a id="want-to-create-a-form-field-for-objects-property" class="anchor" href="#want-to-create-a-form-field-for-objects-property" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Want to create a form field for object's property?</h3>
-
-<ol>
+<ul>
 <li>
-<p>Create  <code>DorfFieldDefinition</code> which contains info about a label, validators and more (e.g. type of the input field).</p>
-
-<div class="highlight highlight-source-js"><pre>get <span class="pl-en">nameDefinition</span>()<span class="pl-k">:</span> DorfInputDefinition {
-    <span class="pl-k">return</span> {
-        label<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>Name<span class="pl-pds">"</span></span>,
-        validator<span class="pl-k">:</span> <span class="pl-smi">Validators</span>.<span class="pl-smi">required</span>,
-        type<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>text<span class="pl-pds">"</span></span>
-    };
-}</pre></div>
+<a href="http://mat3e.github.io/dorf">DORF</a> - <em>Domain Object Reactive Forms</em> is an Angular 2 library for TypeScript which speeds up the creation of <a href="https://angular.io/docs/ts/latest/cookbook/dynamic-form.html">Angular's Reactive Forms</a>
 </li>
-<li>
-<p>Create <em>Component</em> which extends <code>AbstractDorfDetailsComponent</code> and uses a template similar to <em>details.view.html</em> from the library (or even directly <em>details.view.html</em>).</p>
-
-<div class="highlight highlight-source-js"><pre>@<span class="pl-en">Component</span>({
-    templateUrl<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>../../dorf/details.view.html<span class="pl-pds">"</span></span>
-})
-<span class="pl-k">export</span> <span class="pl-k">class</span> <span class="pl-en">ExampleComponent</span> <span class="pl-k">extends</span> <span class="pl-e">AbstractDorfDetailsComponent</span><span class="pl-k">&lt;</span>ExampleModel<span class="pl-k">&gt;</span> <span class="pl-k">implements</span> OnInit</pre></div>
-</li>
-<li>
-<p>Inside your <em>Component</em> override <code>getDomainObject</code> method for returning a domain object:</p>
-
-<div class="highlight highlight-source-js"><pre><span class="pl-k">protected</span> <span class="pl-en">getDomainObject</span>()<span class="pl-k">:</span> ExampleModel {
-    <span class="pl-k">return</span> <span class="pl-v">this</span>.<span class="pl-smi">model</span>;
-}</pre></div>
-
-<p>and <code>getFieldDefinitions</code> method for returning <em>propertyName-fieldDefinition</em> map for your object:</p>
-
-<div class="highlight highlight-source-js"><pre><span class="pl-k">protected</span> <span class="pl-en">getFieldDefinitions</span>()<span class="pl-k">:</span> DorfPropertiesToDefinitionsMap<span class="pl-k">&lt;</span>ExampleModel<span class="pl-k">&gt;</span> {
-    <span class="pl-k">return</span> {
-        <span class="pl-s"><span class="pl-pds">"</span>name<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-v">this</span>.<span class="pl-smi">model</span>.<span class="pl-smi">nameDefinition</span>
-    }
-}</pre></div>
-</li>
-<li><p>Call <code>super.ngOnInit();</code> inside your Component's <code>ngOnInit</code> method.</p></li>
-<li><p>You are done! Enjoy your <em>Reactive Form</em>.</p></li>
-</ol>
+</ul>
       </section>
       <footer>
         <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
