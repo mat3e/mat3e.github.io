@@ -31,7 +31,7 @@ This library is about taking _Reactive Forms_ to the next level by coupling them
         return this.model;
     }
 ```
-and `getFieldDefinitions` method for returning `propertyName-fieldDefinition` map for your object:
+and `getFieldDefinitions` method for returning _propertyName-fieldDefinition_ map for your object:
 ```javascript
     protected getFieldDefinitions(): DorfPropertiesToDefinitionsMap<ExampleModel> {
         return {
@@ -40,5 +40,6 @@ and `getFieldDefinitions` method for returning `propertyName-fieldDefinition` ma
     }
 ```
 
+:four: Call `super.ngOnInit();` inside your Component's `ngOnInit` method.
 
-:four: And you are done! Enjoy your _Reactive Form_.
+:five: You are done! Enjoy your _Reactive Form_.
