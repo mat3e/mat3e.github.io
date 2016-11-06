@@ -33,7 +33,7 @@ This library is about taking _Reactive Forms_ to the next level by coupling them
 ```
 and `getFieldDefinitions` method for returning _propertyName-fieldDefinition_ map for your object:
 ```javascript
-    protected getFieldDefinitions(): DorfPropertiesToDefinitionsMap<ExampleModel> {
+    protected getFieldDefinitions(): PropertiesToDorfDefinitionsMap<ExampleModel> {
         return {
             "name": this.model.nameDefinition
         }
