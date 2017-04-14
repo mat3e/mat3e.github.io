@@ -1,6 +1,0 @@
-{
-  "name": "mat3e",
-  "tagline": "Programmer and IT Designer",
-  "body": "## mat3e's github pages repo\r\n\r\nThis repository is used to host websites available at [http://mat3e.github.io](http://mat3e.github.io).\r\n- [DORF](http://mat3e.github.io/dorf) - _Domain Object Reactive Forms_ is an Angular 2 library for TypeScript which speeds up the creation of [Angular's Reactive Forms](https://angular.io/docs/ts/latest/cookbook/dynamic-form.html)\r\n",
-  "note": "Don't delete this file! It's used internally to help with page regeneration."
-}
