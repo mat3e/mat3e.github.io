@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="Mateusz Chrzonstowski (mat3e) - official site">
+    <meta name="keywords" content="mat3e,official">
+    <meta name="author" content="mat3e">
+
+    <title>Mateusz (mat3e) - official</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/font-awesome@4.7.0/css/font-awesome.min.css">
+
+    <style>
+        body {
+            font-family: Arial;
+            color: white;
+        }
+
+        article {
+            width: 100%;
+            max-width: 1280px;
+            height: 720px;
+
+            margin: 0 auto;
+
+            display: flex;
+            flex-direction: column;
+
+            background-size: cover;
+            background-image: url('official_bg_hd_mobile.jpg');
+        }
+
+        .my-flex-header {
+            margin: auto;
+            text-align: center;
+            font-size: 2.5em;
+        }
+
+        .my-flex-header h1 {
+            margin-top: .2em;
+            margin-bottom: .2em;
+        }
+
+        .my-flex-content {
+            margin-left: auto;
+            margin-right: auto;
+            min-width: 22.5em;
+            flex: 1;
+            overflow-y: auto;
+            background-color: rgba(100, 100, 100, .5);
+        }
+
+        .my-accordion {
+            max-width: 22.5em;
+            width: 100%;
+        }
+
+        .my-accordion h3 {
+            cursor: pointer;
+        }
+
+        .my-accordion .my-accordion-tab.my-accordion-collapsed {
+            display: none;
+        }
+
+        .my-flex-content .my-accordion .my-accordion-tab a {
+            text-decoration: none;
+            font-weight: bolder;
+            color: inherit;
+        }
+
+        .my-flex-content .my-accordion .my-accordion-tab a:hover {
+            color: black;
+        }
+
+        .my-flex-footer {
+            margin-top: auto;
+            margin-left: auto;
+        }
+
+        .my-flex-footer a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .my-flex-footer a:hover {
+            color: black;
+        }
+
+        @media screen and (min-width: 50em) {
+
+            article {
+                background-image: url('official_bg_hd.jpg');
+            }
+
+            .my-flex-header {
+                margin-right: 0;
+                font-size: 2em;
+            }
+
+            .my-flex-header h1::after {
+                content: " ";
+                white-space: pre;
+            }
+
+            .my-flex-content {
+                margin-left: auto;
+                margin-right: 0;
+                min-width: 22.5em;
+                flex: 1;
+                background: none;
+            }
+        }
+
+        @media screen and (min-width: 60em) {
+            body {
+                color: black;
+            }
+
+            .my-flex-content .my-accordion .my-accordion-tab a:hover {
+                color: white;
+            }
+
+            .my-flex-footer a {
+                color: black;
+            }
+
+            .my-flex-footer a:hover {
+                color: white;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <article>
+        <header class="my-flex-header">
+            <h1>Mateusz (mat3e)</h1>
+        </header>
+        <main class="my-flex-content">
+            <div class="my-accordion">
+                <h3>Repositories <span class="fa fa-angle-right"></span></h3>
+                <div class="my-accordion-tab my-accordion-collapsed">
+                    <ul>
+                        <li>
+                            <a href="http://mat3e.github.io/brains">Brains</a> - Small <a href="http://vanilla-js.com/">Vanilla JS</a>                            app which generates <a href="http://knowyourmeme.com/memes/expanding-brain">Expanding Brain</a>                            meme
+                        </li>
+                        <li><a href="https://mat3e.github.io/dorf">DORF</a> - <em>Domain Object Reactive Forms</em> - Angular
+                            2+ library for TypeScript which speeds up the creation of <a href="https://angular.io/docs/ts/latest/cookbook/dynamic-form.html">Dynamic Forms</a>
+                            <a href="https://www.npmjs.com/package/dorf"><img src="https://img.shields.io/npm/v/dorf.svg" alt="npm version" /></a>
+                        </li>
+                        <li><a href="https://github.com/mat3e/olingo-jpa">olingo-jpa</a> - Helpers for connecting Apache Olingo
+                            (OData 4) with Spring and Hibernate</li>
+                    </ul>
+                </div>
+                <h3>Articles <span class="fa fa-angle-right"></span></h3>
+                <div class="my-accordion-tab my-accordion-collapsed">
+                    <ul>
+                        <li><a href="https://www.linkedin.com/pulse/programmers-safe-from-automation-mateusz-chrzonstowski">Are programmers safe from automation?</a>                            - LinkedIn article; published also on <a href="https://medium.com/@mat3e/are-programmers-safe-from-automation-9246fc1aa525">Medium</a></li>
+                        <li><a href="https://www.linkedin.com/pulse/win-win-situation-microsoft-amazon-mateusz-chrzonstowski">Win-win situation for Microsoft and Amazon</a>                            - my view on Microsoft-Amazon cooperation; published also on <a href="https://medium.com/@mat3e/win-win-situation-for-microsoft-and-amazon-2125c8ded199">Medium</a></li>
+                    </ul>
+                </div>
+                <h3>Events <span class="fa fa-angle-right"></span></h3>
+                <div class="my-accordion-tab my-accordion-collapsed">
+                    <ul>
+                        <li>Targi Kariera IT [30.09.17] - <q>JHipster – zróbmy sobie apkę, bez kodzenia (prawie)</q></li>
+                        <li>Confitura [01.07.17] - <q>OData w Javie: wprowadzenie do Apache Olingo</q></li>
+                        <li>Warsaw IT Days [28.03.17] - <q>Gdzie Java nie może, tam Gosu pośle. Alternatywne języki JVM</q></li>
+                        <li>JUG Köln [12.12.16] - <q>OData REST services in Java with Apache Olingo™</q></li>
+                        <li>Lublin Startup Festival [20.10.16] - <q>Integracje systemów - trudny dialog</q></li>
+                        <li>Lublin Startup Festival [22.10.15] - <q>Angular - wyniesienie JavaScriptu na nowy poziom (powered by Google)</q></li>
+                        <li>Codepot [29.08.15] - <q>Add types - reduce bugs. Transition from Javascript to TypeScript</q></li>
+                    </ul>
+                </div>
+                <h3>Certifications <span class="fa fa-angle-right"></span></h3>
+                <div class="my-accordion-tab my-accordion-collapsed">
+                    <ul>
+                        <li>TOGAF 9 [04.2017]</li>
+                        <li>Oracle Certified Associate Java SE 8 Programmer [03.2017]</li>
+                        <li>Microsoft Specialist Programming in HTML5 with JavaScript and CSS3 [09.2016]</li>
+                        <li>Guidewire Specialist Certification - InsuranceSuite 8.0 Integration [11.2015]</li>
+                    </ul>
+                </div>
+            </div>
+        </main>
+        <footer class="my-flex-footer">
+            <a href="https://twitter.com/_mat3e_" class="fa fa-3x fa-twitter"></a>
+            <a href="https://www.linkedin.com/in/mateusz-chrzonstowski-916617109/" class="fa fa-3x fa-linkedin-square"></a>&nbsp;
+        </footer>
+    </article>
+
+    <script>
+        (function () {
+            var accordionHeaders = [];
+
+            var kids = document.getElementsByClassName('my-accordion')[0].children;
+            for (var i = 0; i < kids.length; ++i) {
+                var kid = kids[i];
+
+                if (kid.tagName === 'H3') {
+                    accordionHeaders.push(kid);
+                }
+            }
+
+            accordionHeaders.forEach((header) => {
+                header.addEventListener('click', () => {
+                    var span = header.firstElementChild;
+                    var wasExpanded = false;
+                    if (span.className === 'fa fa-angle-down') {
+                        wasExpanded = true;
+                    }
+
+                    accordionHeaders.forEach((otherHeader) => {
+                        otherHeader.firstElementChild.className = 'fa fa-angle-right';
+                        otherHeader.nextElementSibling.className = 'my-accordion-tab my-accordion-collapsed';
+                    });
+
+                    if (!wasExpanded) {
+                        span.className = 'fa fa-angle-down';
+                        header.nextElementSibling.className = 'my-accordion-tab';
+                    }
+                });
+            })
+        })();
+    </script>
+</body>
+
+</html>
