@@ -7,4 +7,4 @@
 - [Win-win situation for Microsoft and Amazon](https://www.linkedin.com/pulse/win-win-situation-microsoft-amazon-mateusz-chrzonstowski) - my view on Microsoft-Amazon cooperation; published also on [Medium](https://medium.com/@mat3e/win-win-situation-for-microsoft-and-amazon-2125c8ded199)
 
 [![Twitter](https://twitter.com/favicon.ico)](https://twitter.com/_mat3e_)
-[![LinkedIn](https://www.linkedin.com/favicon.ico)](https://www.linkedin.com/in/mateusz-chrzonstowski-916617109/)
+[![LinkedIn](https://www.linkedin.com/favicon.ico)](https://www.linkedin.com/in/mateusz-chrzonstowski/)
