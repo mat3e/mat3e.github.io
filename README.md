@@ -8,8 +8,9 @@ My simple GitHub page.
 - [olingo-jpa](https://github.com/mat3e/olingo-jpa) - Helpers for connecting Apache Olingo (OData 4) with Spring and Hibernate
 - [TaskR](https://github.com/mat3e/taskr) - Demo JHipster application for managing through Tasks (Yet Another Ticket System)
 - [simple-js-editor](https://mat3e.github.io/simple-js-editor/) - I needed editable code snippets inside [Reveal.js](http://lab.hakim.se/reveal-js/#/) presentations, so I did this
-- [Are programmers safe from automation?](https://www.linkedin.com/pulse/programmers-safe-from-automation-mateusz-chrzonstowski) - LinkedIn article; published also on [Medium](https://medium.com/@mat3e/are-programmers-safe-from-automation-9246fc1aa525)
-- [Win-win situation for Microsoft and Amazon](https://www.linkedin.com/pulse/win-win-situation-microsoft-amazon-mateusz-chrzonstowski) - my view on Microsoft-Amazon cooperation; published also on [Medium](https://medium.com/@mat3e/win-win-situation-for-microsoft-and-amazon-2125c8ded199)
+- [Are programmers safe from automation?](https://www.linkedin.com/pulse/programmers-safe-from-automation-mateusz-chrzonstowski) - LinkedIn article; I put it also on [Medium](https://medium.com/@mat3e/are-programmers-safe-from-automation-9246fc1aa525)
+- [Win-win situation for Microsoft and Amazon](https://www.linkedin.com/pulse/win-win-situation-microsoft-amazon-mateusz-chrzonstowski) - my view on Microsoft-Amazon cooperation; I put it also on [Medium](https://medium.com/@mat3e/win-win-situation-for-microsoft-and-amazon-2125c8ded199)
+- [My view on the strategy of Tesla](https://www.linkedin.com/pulse/my-view-strategy-tesla-mateusz-chrzonstowski/) - my words after Tesla Semi was officially presented for the first time; I put it also on [Medium](https://medium.com/@mat3e/my-view-on-the-strategy-of-tesla-51c152ed67ad)
 
 [![Twitter](https://twitter.com/favicon.ico)](https://twitter.com/_mat3e_)
 [![LinkedIn](https://www.linkedin.com/favicon.ico)](https://www.linkedin.com/in/mateusz-chrzonstowski/)
