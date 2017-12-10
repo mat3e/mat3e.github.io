@@ -31,6 +31,15 @@
             background-image: url('official_bg_hd_mobile.jpg');
         }
 
+        .my-yellow {
+            color: gold;
+            text-shadow: 0px 0px 10px black;
+        }
+
+        .my-no-shadow {
+            text-shadow: none !important;
+        }
+
         .my-flex-header {
             margin: auto;
             text-align: center;
@@ -50,7 +59,7 @@
             padding-right: .5em;
             flex: 1;
             overflow-y: auto;
-            background-color: rgba(100, 100, 100, .5);
+            background: radial-gradient(circle at 0 0, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
         }
 
         .my-accordion {
@@ -60,6 +69,13 @@
 
         .my-accordion h3 {
             cursor: pointer;
+            margin-top: .5em;
+            margin-bottom: .5em;
+        }
+
+        .my-accordion h3:hover {
+            color: gold;
+            text-shadow: 0px 0px 10px black;
         }
 
         .my-accordion .my-accordion-tab.my-accordion-collapsed {
@@ -73,7 +89,8 @@
         }
 
         .my-flex-content .my-accordion .my-accordion-tab a:hover {
-            color: black;
+            color: gold;
+            text-shadow: 0px 0px 10px black;
         }
 
         .my-flex-footer {
@@ -87,7 +104,8 @@
         }
 
         .my-flex-footer a:hover {
-            color: black;
+            color: gold;
+            text-shadow: 0px 0px 10px black;
         }
 
         @media screen and (min-width: 50em) {
@@ -125,16 +143,8 @@
                 max-width: 1000px;
             }
 
-            .my-flex-content .my-accordion .my-accordion-tab a:hover {
-                color: white;
-            }
-
             .my-flex-footer a {
                 color: black;
-            }
-
-            .my-flex-footer a:hover {
-                color: white;
             }
         }
     </style>
@@ -143,55 +153,118 @@
 <body>
     <article itemscope itemtype="http://schema.org/Person">
         <header class="my-flex-header">
-            <h1><span itemprop="name">Mateusz</span> (<span itemprop="additionalName">mat3e</span>)</h1>
+            <h1>
+                <span itemprop="name">Mateusz</span> (
+                <span itemprop="additionalName">mat3e</span>)</h1>
         </header>
         <main class="my-flex-content">
             <div class="my-accordion">
-                <h3>Repositories <span class="fa fa-angle-right"></span></h3>
+                <h3>Repositories
+                    <span class="fa fa-angle-right"></span>
+                </h3>
                 <div class="my-accordion-tab my-accordion-collapsed">
                     <ul>
                         <li>
-                            <a href="https://mat3e.github.io/brains">Brains</a> - Small <a href="http://vanilla-js.com/">Vanilla JS</a>                            app which generates <a href="http://knowyourmeme.com/memes/expanding-brain">Expanding Brain</a>                            meme
+                            <a href="https://mat3e.github.io/brains">Brains</a> - Small
+                            <a href="http://vanilla-js.com/">Vanilla JS</a> app which generates
+                            <a href="http://knowyourmeme.com/memes/expanding-brain">Expanding Brain</a> meme
                         </li>
-                        <li><a href="https://mat3e.github.io/dorf">DORF</a> - <em>Domain Object Reactive Forms</em> - Angular
-                            2+ library for TypeScript which speeds up the creation of <a href="https://angular.io/docs/ts/latest/cookbook/dynamic-form.html">Dynamic Forms</a>
-                            <a href="https://www.npmjs.com/package/dorf"><img src="https://img.shields.io/npm/v/dorf.svg" alt="npm version" /></a>
+                        <li>
+                            <a href="https://mat3e.github.io/dorf">DORF</a> -
+                            <em>Domain Object Reactive Forms</em> - Angular 2+ library for TypeScript which speeds up the creation
+                            of
+                            <a href="https://angular.io/docs/ts/latest/cookbook/dynamic-form.html">Dynamic Forms</a>
+                            <a href="https://www.npmjs.com/package/dorf">
+                                <img src="https://img.shields.io/npm/v/dorf.svg" alt="npm version" />
+                            </a>
                         </li>
-                        <li><a href="https://github.com/mat3e/olingo-jpa">olingo-jpa</a> - Helpers for connecting Apache Olingo
-                            (OData 4) with Spring and Hibernate</li>
-                        <li><a href="https://github.com/mat3e/taskr">TaskR</a> - Demo JHipster application for managing through
-                            Tasks (Yet Another Ticket System)</li>
-                        <li><a href="https://mat3e.github.io/simple-js-editor/">simple-js-editor</a> - I needed editable code
-                            snippets inside <a href="http://lab.hakim.se/reveal-js/#/">Reveal.js</a> presentations, so I
-                            did this</li>
+                        <li>
+                            <a href="https://github.com/mat3e/olingo-jpa">olingo-jpa</a> - Helpers for connecting Apache Olingo (OData 4) with Spring and Hibernate</li>
+                        <li>
+                            <a href="https://github.com/mat3e/taskr">TaskR</a> - Demo JHipster application for managing through Tasks (Yet Another Ticket System)</li>
+                        <li>
+                            <a href="https://mat3e.github.io/simple-js-editor/">simple-js-editor</a> - I needed editable code snippets inside
+                            <a href="http://lab.hakim.se/reveal-js/#/">Reveal.js</a> presentations, so I did this</li>
                     </ul>
                 </div>
-                <h3>Articles <span class="fa fa-angle-right"></span></h3>
+                <h3>Articles
+                    <span class="fa fa-angle-right"></span>
+                </h3>
                 <div class="my-accordion-tab my-accordion-collapsed">
                     <ul>
-                        <li><a href="https://www.linkedin.com/pulse/programmers-safe-from-automation-mateusz-chrzonstowski">Are programmers safe from automation?</a>                            - LinkedIn article; published also on <a href="https://medium.com/@mat3e/are-programmers-safe-from-automation-9246fc1aa525">Medium</a></li>
-                        <li><a href="https://www.linkedin.com/pulse/win-win-situation-microsoft-amazon-mateusz-chrzonstowski">Win-win situation for Microsoft and Amazon</a>                            - my view on Microsoft-Amazon cooperation; published also on <a href="https://medium.com/@mat3e/win-win-situation-for-microsoft-and-amazon-2125c8ded199">Medium</a></li>
+                        <li>
+                            <a href="https://www.linkedin.com/pulse/programmers-safe-from-automation-mateusz-chrzonstowski">Are programmers safe from automation?</a> - LinkedIn article; I put it also on
+                            <a href="https://medium.com/@mat3e/are-programmers-safe-from-automation-9246fc1aa525">Medium</a>
+                        </li>
+                        <li>
+                            <a href="https://www.linkedin.com/pulse/win-win-situation-microsoft-amazon-mateusz-chrzonstowski">Win-win situation for Microsoft and Amazon</a> - my view on Microsoft-Amazon cooperation; I put
+                            it also on
+                            <a href="https://medium.com/@mat3e/win-win-situation-for-microsoft-and-amazon-2125c8ded199">Medium</a>
+                        </li>
+                        <li>
+                            <a href="https://www.linkedin.com/pulse/my-view-strategy-tesla-mateusz-chrzonstowski/">My view on the strategy of Tesla</a> - my words after Tesla Semi was officially presented for
+                            the first time; I put it also on
+                            <a href="https://medium.com/@mat3e/my-view-on-the-strategy-of-tesla-51c152ed67ad">Medium</a>
+                        </li>
                     </ul>
                 </div>
-                <h3>Events <span class="fa fa-angle-right"></span></h3>
+                <h3>Events
+                    <span class="fa fa-angle-right"></span>
+                </h3>
                 <div class="my-accordion-tab my-accordion-collapsed">
                     <ul>
-                        <li><b>Targi Kariera IT</b> [30.09.17] - <q>JHipster – zróbmy sobie apkę, bez kodzenia (prawie)</q></li>
-                        <li><b>Confitura</b> [01.07.17] - <q>OData w Javie: wprowadzenie do Apache Olingo</q></li>
-                        <li><b>Warsaw IT Days</b> [28.03.17] - <q>Gdzie Java nie może, tam Gosu pośle. Alternatywne języki JVM</q></li>
-                        <li><b>JUG Köln</b> [12.12.16] - <q>OData REST services in Java with Apache Olingo™</q></li>
-                        <li><b>Lublin Startup Festival</b> [20.10.16] - <q>Integracje systemów - trudny dialog</q></li>
-                        <li><b>Lublin Startup Festival</b> [22.10.15] - <q>Angular - wyniesienie JavaScriptu na nowy poziom (powered by Google)</q></li>
-                        <li><b>Codepot</b> [29.08.15] - <q>Add types - reduce bugs. Transition from Javascript to TypeScript</q></li>
+                        <li>
+                            <b>Discussion Panel</b> [16.11.2017] -
+                            <q>Front-end vs. Back-end, jaki język programowania wybrać?</q>
+                            <a href="https://web.facebook.com/infoshareacademy/videos/868483633316364/" class="my-no-shadow">📽️</a>
+                        </li>
+                        <li>
+                            <b>Targi Kariera IT</b> [30.09.17] -
+                            <q>JHipster – zróbmy sobie apkę, bez kodzenia (prawie)</q>
+                            <a href="https://photos.google.com/share/AF1QipOotvynJoiYb76rbInZdqkgJpG4lZflhhnyskL6lnm1nWg-sr6lFvKD2Rc1L_5YiQ/photo/AF1QipN7lZ-E5HGV4IGI6kZNA9QDx84xdRxWA6Qpk9vN?key=RzFaRDZvT0ctdjFwRi1jTkt4djNoSkRkVzNyT2tB"
+                                class="my-no-shadow">📷</a>
+                        </li>
+                        <li>
+                            <b>Confitura</b> [01.07.17] -
+                            <q>OData w Javie: wprowadzenie do Apache Olingo</q>
+                            <a href="https://www.youtube.com/watch?v=sSLXUOaOmkk" class="my-no-shadow">📽️</a>
+                        </li>
+                        <li>
+                            <b>Warsaw IT Days</b> [28.03.17] -
+                            <q>Gdzie Java nie może, tam Gosu pośle. Alternatywne języki JVM</q>
+                        </li>
+                        <li>
+                            <b>JUG Köln</b> [12.12.16] -
+                            <q>OData REST services in Java with Apache Olingo™</q>
+                        </li>
+                        <li>
+                            <b>Lublin Startup Festival</b> [20.10.16] -
+                            <q>Integracje systemów - trudny dialog</q>
+                            <a href="https://youtu.be/0Sp9HWPPCSU?t=4h52m55s" class="my-no-shadow">📽️</a>
+                        </li>
+                        <li>
+                            <b>Lublin Startup Festival</b> [22.10.15] -
+                            <q>Angular - wyniesienie JavaScriptu na nowy poziom (powered by Google)</q>
+                        </li>
+                        <li>
+                            <b>Codepot</b> [29.08.15] -
+                            <q>Add types - reduce bugs. Transition from Javascript to TypeScript</q>
+                        </li>
                     </ul>
                 </div>
-                <h3>Certifications <span class="fa fa-angle-right"></span></h3>
+                <h3>Certifications
+                    <span class="fa fa-angle-right"></span>
+                </h3>
                 <div class="my-accordion-tab my-accordion-collapsed">
                     <ul>
-                        <li><b>TOGAF 9</b> [04.2017]</li>
-                        <li><b>Oracle Certified Associate</b>, Java SE 8 Programmer [03.2017]</li>
-                        <li><b>Microsoft Specialist</b>: Programming in HTML5 with JavaScript and CSS3 [09.2016]</li>
-                        <li><b>Guidewire Specialist Certification</b> - InsuranceSuite 8.0 Integration [11.2015]</li>
+                        <li>
+                            <b>TOGAF 9</b> [04.2017]</li>
+                        <li>
+                            <b>Oracle Certified Associate</b>, Java SE 8 Programmer [03.2017]</li>
+                        <li>
+                            <b>Microsoft Specialist</b>: Programming in HTML5 with JavaScript and CSS3 [09.2016]</li>
+                        <li>
+                            <b>Guidewire Specialist Certification</b> - InsuranceSuite 8.0 Integration [11.2015]</li>
                     </ul>
                 </div>
             </div>
@@ -226,11 +299,13 @@
                     accordionHeaders.forEach((otherHeader) => {
                         otherHeader.firstElementChild.className = 'fa fa-angle-right';
                         otherHeader.nextElementSibling.className = 'my-accordion-tab my-accordion-collapsed';
+                        otherHeader.className = '';
                     });
 
                     if (!wasExpanded) {
                         span.className = 'fa fa-angle-down';
                         header.nextElementSibling.className = 'my-accordion-tab';
+                        header.className = 'my-yellow';
                     }
                 });
             })
