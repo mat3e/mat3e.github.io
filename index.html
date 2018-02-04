@@ -75,6 +75,7 @@
 
         .my-accordion h3:hover {
             color: gold;
+            cursor: pointer;
             text-shadow: 0px 0px 10px black;
         }
 
@@ -88,9 +89,14 @@
             color: inherit;
         }
 
-        .my-flex-content .my-accordion .my-accordion-tab a:hover {
+        .my-flex-content .my-accordion .my-accordion-tab a:hover,
+        .my-flex-content .my-accordion .my-accordion-tab .my-title:hover {
             color: gold;
             text-shadow: 0px 0px 10px black;
+        }
+
+        .my-flex-content .my-accordion .my-accordion-tab .my-title:hover {
+            cursor: default;
         }
 
         .my-flex-footer {
@@ -154,7 +160,8 @@
     <article itemscope itemtype="http://schema.org/Person">
         <header class="my-flex-header">
             <h1>
-                <span itemprop="name">Mateusz</span> (<span itemprop="additionalName">mat3e</span>)
+                <span itemprop="name">Mateusz</span> (
+                <span itemprop="additionalName">mat3e</span>)
             </h1>
         </header>
         <main class="my-flex-content">
@@ -179,12 +186,15 @@
                             </a>
                         </li>
                         <li>
-                            <a href="https://github.com/mat3e/olingo-jpa">olingo-jpa</a> - Helpers for connecting Apache Olingo (OData 4) with Spring and Hibernate</li>
+                            <a href="https://github.com/mat3e/olingo-jpa">olingo-jpa</a> - Helpers for connecting Apache Olingo (OData 4) with Spring and Hibernate
+                        </li>
                         <li>
-                            <a href="https://github.com/mat3e/taskr">TaskR</a> - Demo JHipster application for managing through Tasks (Yet Another Ticket System)</li>
+                            <a href="https://github.com/mat3e/taskr">TaskR</a> - Demo JHipster application for managing through Tasks (Yet Another Ticket System)
+                        </li>
                         <li>
                             <a href="https://mat3e.github.io/simple-js-editor/">simple-js-editor</a> - I needed editable code snippets inside
-                            <a href="http://lab.hakim.se/reveal-js/#/">Reveal.js</a> presentations, so I did this</li>
+                            <a href="http://lab.hakim.se/reveal-js/#/">Reveal.js</a> presentations, so I did this
+                        </li>
                     </ul>
                 </div>
                 <h3>Articles
@@ -214,40 +224,40 @@
                 <div class="my-accordion-tab my-accordion-collapsed">
                     <ul>
                         <li>
-                            <b>Discussion Panel</b> [16.11.2017] -
+                            <a href="https://web.facebook.com/infoshareacademy/videos/868483633316364/">Discussion Panel</a> [16.11.2017] -
                             <q>Front-end vs. Back-end, jaki język programowania wybrać?</q>
                             <a href="https://web.facebook.com/infoshareacademy/videos/868483633316364/" class="my-emoji-shadow">📽️</a>
                         </li>
                         <li>
-                            <b>Targi Kariera IT</b> [30.09.17] -
+                            <a href="https://photos.google.com/share/AF1QipOotvynJoiYb76rbInZdqkgJpG4lZflhhnyskL6lnm1nWg-sr6lFvKD2Rc1L_5YiQ/photo/AF1QipN7lZ-E5HGV4IGI6kZNA9QDx84xdRxWA6Qpk9vN?key=RzFaRDZvT0ctdjFwRi1jTkt4djNoSkRkVzNyT2tB">Targi Kariera IT</a> [30.09.17] -
                             <q>JHipster – zróbmy sobie apkę, bez kodzenia (prawie)</q>
                             <a href="https://photos.google.com/share/AF1QipOotvynJoiYb76rbInZdqkgJpG4lZflhhnyskL6lnm1nWg-sr6lFvKD2Rc1L_5YiQ/photo/AF1QipN7lZ-E5HGV4IGI6kZNA9QDx84xdRxWA6Qpk9vN?key=RzFaRDZvT0ctdjFwRi1jTkt4djNoSkRkVzNyT2tB"
                                 class="my-emoji-shadow">📷</a>
                         </li>
                         <li>
-                            <b>Confitura</b> [01.07.17] -
+                            <a href="https://www.youtube.com/watch?v=sSLXUOaOmkk">Confitura</a> [01.07.17] -
                             <q>OData w Javie: wprowadzenie do Apache Olingo</q>
                             <a href="https://www.youtube.com/watch?v=sSLXUOaOmkk" class="my-emoji-shadow">📽️</a>
                         </li>
                         <li>
-                            <b>Warsaw IT Days</b> [28.03.17] -
+                            <b class="my-title">Warsaw IT Days</b> [28.03.17] -
                             <q>Gdzie Java nie może, tam Gosu pośle. Alternatywne języki JVM</q>
                         </li>
                         <li>
-                            <b>JUG Köln</b> [12.12.16] -
+                            <b class="my-title">JUG Köln</b> [12.12.16] -
                             <q>OData REST services in Java with Apache Olingo™</q>
                         </li>
                         <li>
-                            <b>Lublin Startup Festival</b> [20.10.16] -
+                            <a href="https://youtu.be/0Sp9HWPPCSU?t=4h52m55s">Lublin Startup Festival</a> [20.10.16] -
                             <q>Integracje systemów - trudny dialog</q>
                             <a href="https://youtu.be/0Sp9HWPPCSU?t=4h52m55s" class="my-emoji-shadow">📽️</a>
                         </li>
                         <li>
-                            <b>Lublin Startup Festival</b> [22.10.15] -
+                            <b class="my-title">Lublin Startup Festival</b> [22.10.15] -
                             <q>Angular - wyniesienie JavaScriptu na nowy poziom (powered by Google)</q>
                         </li>
                         <li>
-                            <b>Codepot</b> [29.08.15] -
+                            <b class="my-title">Codepot</b> [29.08.15] -
                             <q>Add types - reduce bugs. Transition from Javascript to TypeScript</q>
                         </li>
                     </ul>
@@ -258,13 +268,13 @@
                 <div class="my-accordion-tab my-accordion-collapsed">
                     <ul>
                         <li>
-                            <b>TOGAF 9</b> [04.2017]</li>
+                            <b class="my-title">TOGAF 9</b> [04.2017]</li>
                         <li>
-                            <b>Oracle Certified Associate</b>, Java SE 8 Programmer [03.2017]</li>
+                            <b class="my-title">Oracle Certified Associate</b>, Java SE 8 Programmer [03.2017]</li>
                         <li>
-                            <b>Microsoft Specialist</b>: Programming in HTML5 with JavaScript and CSS3 [09.2016]</li>
+                            <b class="my-title">Microsoft Specialist</b>: Programming in HTML5 with JavaScript and CSS3 [09.2016]</li>
                         <li>
-                            <b>Guidewire Specialist Certification</b> - InsuranceSuite 8.0 Integration [11.2015]</li>
+                            <b class="my-title">Guidewire Specialist Certification</b> - InsuranceSuite 8.0 Integration [11.2015]</li>
                     </ul>
                 </div>
             </div>
@@ -281,21 +291,23 @@
 
     <script>
         (function () {
-            var accordionHeaders = [];
+            const accordionHeaders = [];
 
-            var kids = document.getElementsByClassName('my-accordion')[0].children;
-            for (var i = 0; i < kids.length; ++i) {
-                var kid = kids[i];
+            // collecting the headers
+            const kids = document.getElementsByClassName('my-accordion')[0].children;
+            for (let i = 0; i < kids.length; ++i) {
+                let kid = kids[i];
 
                 if (kid.tagName === 'H3') {
                     accordionHeaders.push(kid);
                 }
             }
 
+            // adding accordion functionality for headers
             accordionHeaders.forEach((header) => {
                 header.addEventListener('click', () => {
-                    var span = header.firstElementChild;
-                    var wasExpanded = false;
+                    const span = header.firstElementChild;
+                    let wasExpanded = false;
                     if (span.className === 'fa fa-angle-down') {
                         wasExpanded = true;
                     }
@@ -307,12 +319,23 @@
                     });
 
                     if (!wasExpanded) {
+                        location.hash = accordionHeaders.indexOf(header);
                         span.className = 'fa fa-angle-down';
                         header.nextElementSibling.className = 'my-accordion-tab';
                         header.className = 'my-yellow';
                     }
                 });
-            })
+            });
+
+            // comeback to the page
+            let tabId = location.hash;
+            if (tabId) {
+                accordionHeaders[+tabId.substring(1)].dispatchEvent(new MouseEvent('click', {
+                    'view': window,
+                    'bubbles': true,
+                    'cancelable': false
+                }));
+            }
         })();
     </script>
 </body>
