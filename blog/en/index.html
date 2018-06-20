@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="Mateusz Chrzonstowski (mat3e) - official blog">
+    <meta name="keywords" content="mat3e,official,blog,programmer,programming,software,development,engineer,technology">
+    <meta name="author" content="mat3e">
+
+    <title>Mateusz (mat3e) - official</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/font-awesome@4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <main>
+        <article id="news-0"></article>
+    </main>
+
+    <script>
+        (function () {
+            const prefix = 'news-';
+            const currPost = 0;
+
+            fetch(`https://api.github.com/repos/mat3e/mat3e.github.io/contents/blog/en/posts/${currPost}.md`, {
+                headers: {
+                    'Accept': 'application/vnd.github.VERSION.html'
+                }
+            }).then(response => {
+                document.getElementById(`${prefix}${currPost}`).innerHTML = response;
+            });
+        })();
+    </script>
+</body>
+
+</html>
