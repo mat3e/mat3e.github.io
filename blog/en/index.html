@@ -22,11 +22,12 @@
             const prefix = 'news-';
             const currPost = 0;
 
-            fetch(`https://api.github.com/repos/mat3e/mat3e.github.io/contents/blog/en/posts/${currPost}.md`, {
+            fetch(`https://api.github.com/repos/mat3e/mat3e.github.io/contents/blog/en/posts/${currPost}.md?ref=master`, {
                 headers: {
                     'Accept': 'application/vnd.github.VERSION.html'
                 }
             }).then(response => {
+                console.log(response);
                 document.getElementById(`${prefix}${currPost}`).innerHTML = response;
             });
         })();
