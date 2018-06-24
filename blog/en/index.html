@@ -10,27 +10,47 @@
     <title>Mateusz (mat3e) - official</title>
 
     <link rel="stylesheet" href="https://unpkg.com/font-awesome@4.7.0/css/font-awesome.min.css">
+    <style>
+        main {
+            width: 90%;
+            margin: 0 auto;
+        }
+        article {
+            border-bottom: solid 1px black;
+        }
+        pre {
+            max-height: 100%;
+            overflow: scroll;
+        }
+    </style>
 </head>
 
 <body>
-    <main>
-        <article>
-            <mark-down id="news-0"></mark-down>
-        </article>
-    </main>
+    <main id="blog"></main>
 
     <script src="https://cdn.jsdelivr.net/npm/markdown-element/dist/markdown-element.min.js"></script>
     <script>
         (function () {
-            const prefix = 'news-';
-            const currPost = 0;
+            const placeholder = document.getElementById('blog');
+            render();
 
-            fetch(`https://raw.githubusercontent.com/mat3e/mat3e.github.io/master/blog/en/posts/${currPost}.md`)
-                .then(response => response.text())
-                .then(content => {
-                    console.log(content);
-                    document.getElementById(`${prefix}${currPost}`).textContent = content;
-                });
+            async function render() {
+                let currNews = 0;
+                while (currNews < 2) {
+                    await getNews(currNews);
+                    ++currNews;
+                }
+            }
+
+            function getNews(index) {
+                fetch(`https://raw.githubusercontent.com/mat3e/mat3e.github.io/master/blog/en/posts/${index}.md`)
+                    .then(response => response.text())
+                    .then(content => {
+                        const news = document.createElement('article');
+                        news.appendChild(document.createElement('mark-down')).textContent = content;
+                        placeholder.appendChild(news);
+                    });
+            }
         })();
     </script>
 </body>
