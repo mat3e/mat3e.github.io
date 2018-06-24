@@ -14,22 +14,23 @@
 
 <body>
     <main>
-        <article id="news-0"></article>
+        <article>
+            <mark-down id="news-0"></mark-down>
+        </article>
     </main>
 
+    <script src="https://cdn.jsdelivr.net/npm/markdown-element/dist/markdown-element.min.js" />
     <script>
         (function () {
             const prefix = 'news-';
             const currPost = 0;
 
-            fetch(`https://api.github.com/repos/mat3e/mat3e.github.io/contents/blog/en/posts/${currPost}.md?ref=master`, {
-                headers: {
-                    'Accept': 'application/vnd.github.VERSION.html'
-                }
-            }).then(response => {
-                console.log(response);
-                document.getElementById(`${prefix}${currPost}`).innerHTML = response;
-            });
+            fetch(`https://raw.githubusercontent.com/mat3e/mat3e.github.io/master/blog/en/posts/${currPost}.md`)
+                .then(response => response.text())
+                .then(content => {
+                    console.log(content);
+                    document.getElementById(`${prefix}${currPost}`).textContent = content;
+                });
         })();
     </script>
 </body>
