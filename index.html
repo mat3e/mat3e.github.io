@@ -2,341 +2,439 @@
 <html>
 
 <head>
-    <meta charset="utf-8">
-    <meta name="description" content="Mateusz Chrzonstowski (mat3e) - official site">
-    <meta name="keywords" content="mat3e,official,blog,programmer,programming,software,development,engineer,technology">
+    <meta name="description" content="Pomagam ludziom osiągać lepsze efekty, wytwarzając oprogramowanie oraz dzieląc się wiedzą o tym, jak należy programować. Łączę inżynierskie spojrzenie z uśmiechem i dostrzeganiem pierwiastka ludzkiego w sofcie.">
     <meta name="author" content="mat3e">
+    <meta charset="utf-8">
 
-    <title>Mateusz (mat3e) - official</title>
+    <title>Mateusz Chrzonstowski - inżynier oprogramowania, trener IT, prelegent</title>
 
-    <link rel="stylesheet" href="https://unpkg.com/font-awesome@4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/@fortawesome/fontawesome-free/css/fontawesome.min.css">
+    </link>
+    <link rel="stylesheet" href="https://unpkg.com/@fortawesome/fontawesome-free/css/brands.min.css">
+    </link>
 
     <style>
+        /* TODO: variables */
         body {
-            font-family: Arial;
-            color: white;
-            text-shadow: 0px 0px 10px black;
+            margin: 0;
+            font-family: Helvetica, sans-serif;
         }
 
-        article {
-            width: 100%;
-            height: 720px;
-
-            margin: 0 auto;
-
-            display: flex;
-            flex-direction: column;
-
+        main {
+            background: url('bg.jpg');
             background-size: cover;
-            background-image: url('official_bg_hd_mobile.jpg');
+            overflow: scroll;
+            height: 100vh;
         }
 
-        .my-yellow {
-            color: gold;
-            text-shadow: 0px 0px 10px black;
+        /* technical */
+
+        .t-no-bullets {
+            list-style-type: none;
         }
 
-        .my-emoji-shadow {
-            text-shadow: 0px 0px 10px gold !important;
+        .t-li-inline li {
+            display: inline-block;
         }
 
-        .my-flex-header {
-            margin: auto;
-            text-align: center;
-            font-size: 2.5em;
-        }
-
-        .my-flex-header h1 {
-            margin-top: .2em;
-            margin-bottom: .2em;
-        }
-
-        .my-flex-content {
+        .t-li-centered li {
             margin-left: auto;
             margin-right: auto;
-            min-width: 22.5em;
-            padding-left: .5em;
-            padding-right: .5em;
-            flex: 1;
-            overflow-y: auto;
-            background: radial-gradient(circle at 0 0, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
         }
 
-        .my-accordion {
-            max-width: 22.5em;
-            width: 100%;
+        .t-no-padding {
+            padding: 0;
         }
 
-        .my-accordion h3 {
-            cursor: pointer;
-            margin-top: .5em;
-            margin-bottom: .5em;
+        .t-bg-fff9 {
+            background: rgba(255, 255, 255, .9)
         }
 
-        .my-accordion h3:hover {
-            color: gold;
-            cursor: pointer;
-            text-shadow: 0px 0px 10px black;
+        .t-fs-11 {
+            font-size: 1.1em;
         }
 
-        .my-accordion .my-accordion-tab.my-accordion-collapsed {
-            display: none;
+        .t-fb {
+            font-weight: bold;
         }
 
-        .my-flex-content .my-accordion .my-accordion-tab a {
-            text-decoration: none;
-            font-weight: bolder;
-            color: inherit;
+        .t-p-05 {
+            padding: .5rem;
         }
 
-        .my-flex-content .my-accordion .my-accordion-tab a:hover,
-        .my-flex-content .my-accordion .my-accordion-tab .my-title:hover {
-            color: gold;
-            text-shadow: 0px 0px 10px black;
+        /* colors */
+
+        .red {
+            background-color: rgba(255, 0, 0, .75);
         }
 
-        .my-flex-content .my-accordion .my-accordion-tab .my-title:hover {
-            cursor: default;
+        .green {
+            background-color: rgba(0, 255, 0, .75);
         }
 
-        .my-flex-footer {
-            margin-top: auto;
-            margin-left: auto;
+        .blue {
+            background-color: rgba(0, 0, 255, .75);
         }
 
-        .my-flex-footer a {
-            text-decoration: none;
+        .yellow {
+            background-color: rgba(255, 255, 0, .75);
+        }
+
+        .aqua {
+            background-color: rgba(0, 255, 255, .75);
+        }
+
+        .magenta {
+            background-color: rgba(255, 0, 255, .75);
+        }
+
+        .txt-white {
             color: white;
+            text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
         }
 
-        .my-flex-footer a:hover {
-            color: gold;
-            text-shadow: 0px 0px 10px black;
+        /* business */
+
+        .big-txt {
+            font-size: 2em;
+            text-align: center;
+            text-transform: uppercase;
+            font-weight: bold;
+            line-height: 1;
         }
 
-        @media screen and (min-device-width: 50em) and (min-width: 50em) {
+        .buttons {
+            margin-top: .2em;
+            margin-bottom: 0;
+        }
 
-            article {
-                background-image: url('official_bg_hd.jpg');
+        .button {
+            border: 3px solid black;
+            border-radius: 20%;
+            padding: .5em;
+            max-width: 10em;
+            margin-bottom: .25em;
+        }
+
+        .content {
+            max-width: 40rem;
+            max-height: 20rem;
+            overflow: auto;
+            margin: 0 auto;
+        }
+
+        .content.content-smaller {
+            max-height: 14rem;
+        }
+
+        .links {
+            font-size: 1.5em;
+        }
+
+        /* portrait */
+
+        @media screen and (min-height: 30em) {
+            .buttons {
+                margin-top: 1em;
             }
 
-            .my-flex-header {
-                margin-right: 0;
-                font-size: 2em;
+            .content {
+                max-height: 30rem;
             }
 
-            .my-flex-header h1::after {
-                content: " ";
-                white-space: pre;
+            .content.content-smaller {
+                max-height: 25rem;
             }
 
-            .my-flex-content {
-                margin-left: auto;
-                margin-right: 0;
-                min-width: 22.5em;
-                flex: 1;
-                background: none;
+            .links {
+                position: absolute;
+                bottom: .25em;
+                right: .25em;
             }
         }
 
-        @media screen and (min-device-width: 60em) and (min-width: 60em) {
-            body {
-                color: black;
-                text-shadow: 0px 0px 10px white;
+        @media screen and (min-height: 40em) {
+            .buttons {
+                margin-top: 3em;
             }
 
-            article {
-                max-width: 1000px;
+            .content {
+                max-height: 35rem;
             }
 
-            .my-flex-footer a {
-                color: black;
+            .content.content-smaller {
+                max-height: 31rem;
             }
         }
+
+        @media screen and (min-height: 50em) {
+            .buttons {
+                margin-top: 5em;
+            }
+        }
+
+        /* desktop */
+
+        @media screen and (min-device-width: 100em) {
+
+            /* technical */
+
+            .t-coral-hover:hover {
+                color: coral;
+            }
+
+            /* business */
+
+            .button:hover {
+                cursor: pointer;
+            }
+        }
+
+        /* 
+
+        main {
+            background: url('bg.jpg');
+            background-size: cover;
+            width: 80%;
+            height: 90vh;
+            margin: 0 auto;
+            overflow: scroll;
+        }
+
+        main nav {
+            float: right;
+            margin-right: 2em;
+        }
+
+        .button {
+            font-size: 2em;
+            border: 3px solid black;
+            border-radius: 20%;
+            max-width: 10em;
+            text-align: center;
+            padding: 0.5em;
+            text-transform: uppercase;
+            font-weight: bold;
+            font-family: Helvetica, sans-serif;
+            color: #fff;
+            margin-bottom: .25em;
+            text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+            list-style-type: none;
+        }*/
     </style>
 </head>
 
 <body>
-    <article itemscope itemtype="http://schema.org/Person">
-        <header class="my-flex-header">
-            <h1>
-                <span itemprop="name">Mateusz</span> (<span itemprop="additionalName">mat3e</span>)
-            </h1>
-        </header>
-        <main class="my-flex-content">
-            <div class="my-accordion">
-                <h3>Repositories
-                    <span class="fa fa-angle-right"></span>
-                </h3>
-                <div class="my-accordion-tab my-accordion-collapsed">
-                    <ul>
-                        <li>
-                            <a href="https://mat3e.github.io/brains">Brains</a> - Small
-                            <a href="http://vanilla-js.com/">Vanilla JS</a> app which generates
-                            <a href="http://knowyourmeme.com/memes/expanding-brain">Expanding Brain</a> meme
-                        </li>
-                        <li>
-                            <a href="https://mat3e.github.io/dorf">DORF</a> -
-                            <em>Domain Object Reactive Forms</em> - Angular 2+ library for TypeScript which speeds up the creation
-                            of
-                            <a href="https://angular.io/docs/ts/latest/cookbook/dynamic-form.html">Dynamic Forms</a>
-                            <a href="https://www.npmjs.com/package/dorf">
-                                <img src="https://img.shields.io/npm/v/dorf.svg" alt="npm version" />
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://github.com/mat3e/olingo-jpa">olingo-jpa</a> - Helpers for connecting Apache Olingo (OData 4) with Spring and Hibernate
-                        </li>
-                        <li>
-                            <a href="https://github.com/mat3e/taskr">TaskR</a> - Demo JHipster application for managing through Tasks (Yet Another Ticket System)
-                        </li>
-                        <li>
-                            <a href="https://mat3e.github.io/simple-js-editor/">simple-js-editor</a> - I needed editable code snippets inside
-                            <a href="http://lab.hakim.se/reveal-js/#/">Reveal.js</a> presentations, so I did this
-                        </li>
-                    </ul>
-                </div>
-                <h3>Articles
-                    <span class="fa fa-angle-right"></span>
-                </h3>
-                <div class="my-accordion-tab my-accordion-collapsed">
-                    <ul>
-                        <li>
-                            <a href="https://www.linkedin.com/pulse/programmers-safe-from-automation-mateusz-chrzonstowski">Are programmers safe from automation?</a> - LinkedIn article; I put it also on
-                            <a href="https://medium.com/@mat3e/are-programmers-safe-from-automation-9246fc1aa525">Medium</a>
-                        </li>
-                        <li>
-                            <a href="https://www.linkedin.com/pulse/win-win-situation-microsoft-amazon-mateusz-chrzonstowski">Win-win situation for Microsoft and Amazon</a> - my view on Microsoft-Amazon cooperation; I put
-                            it also on
-                            <a href="https://medium.com/@mat3e/win-win-situation-for-microsoft-and-amazon-2125c8ded199">Medium</a>
-                        </li>
-                        <li>
-                            <a href="https://www.linkedin.com/pulse/my-view-strategy-tesla-mateusz-chrzonstowski/">My view on the strategy of Tesla</a> - my words after Tesla Semi was officially presented for
-                            the first time; I put it also on
-                            <a href="https://medium.com/@mat3e/my-view-on-the-strategy-of-tesla-51c152ed67ad">Medium</a>
-                        </li>
-                    </ul>
-                </div>
-                <h3>Talks
-                    <span class="fa fa-angle-right"></span>
-                </h3>
-                <div class="my-accordion-tab my-accordion-collapsed">
-                    <ul>
-                        <li>
-                            <a href="https://web.facebook.com/infoshareacademy/videos/868483633316364/">Discussion Panel</a> [16.11.2017] -
-                            <q>Front-end vs. Back-end, jaki język programowania wybrać?</q>
-                            <a href="https://web.facebook.com/infoshareacademy/videos/868483633316364/" class="my-emoji-shadow">📽️</a>
-                        </li>
-                        <li>
-                            <a href="https://photos.google.com/share/AF1QipOotvynJoiYb76rbInZdqkgJpG4lZflhhnyskL6lnm1nWg-sr6lFvKD2Rc1L_5YiQ/photo/AF1QipN7lZ-E5HGV4IGI6kZNA9QDx84xdRxWA6Qpk9vN?key=RzFaRDZvT0ctdjFwRi1jTkt4djNoSkRkVzNyT2tB">Targi Kariera IT</a> [30.09.17] -
-                            <q>JHipster – zróbmy sobie apkę, bez kodzenia (prawie)</q>
-                            <a href="https://photos.google.com/share/AF1QipOotvynJoiYb76rbInZdqkgJpG4lZflhhnyskL6lnm1nWg-sr6lFvKD2Rc1L_5YiQ/photo/AF1QipN7lZ-E5HGV4IGI6kZNA9QDx84xdRxWA6Qpk9vN?key=RzFaRDZvT0ctdjFwRi1jTkt4djNoSkRkVzNyT2tB"
-                                class="my-emoji-shadow">📷</a>
-                        </li>
-                        <li>
-                            <a href="https://www.youtube.com/watch?v=sSLXUOaOmkk">Confitura</a> [01.07.17] -
-                            <q>OData w Javie: wprowadzenie do Apache Olingo</q>
-                            <a href="https://www.youtube.com/watch?v=sSLXUOaOmkk" class="my-emoji-shadow">📽️</a>
-                        </li>
-                        <li>
-                            <b class="my-title">Warsaw IT Days</b> [28.03.17] -
-                            <q>Gdzie Java nie może, tam Gosu pośle. Alternatywne języki JVM</q>
-                        </li>
-                        <li>
-                            <b class="my-title">JUG Köln</b> [12.12.16] -
-                            <q>OData REST services in Java with Apache Olingo™</q>
-                        </li>
-                        <li>
-                            <a href="https://youtu.be/0Sp9HWPPCSU?t=4h52m55s">Lublin Startup Festival</a> [20.10.16] -
-                            <q>Integracje systemów - trudny dialog</q>
-                            <a href="https://youtu.be/0Sp9HWPPCSU?t=4h52m55s" class="my-emoji-shadow">📽️</a>
-                        </li>
-                        <li>
-                            <b class="my-title">Lublin Startup Festival</b> [22.10.15] -
-                            <q>Angular - wyniesienie JavaScriptu na nowy poziom (powered by Google)</q>
-                        </li>
-                        <li>
-                            <b class="my-title">Codepot</b> [29.08.15] -
-                            <q>Add types - reduce bugs. Transition from Javascript to TypeScript</q>
-                        </li>
-                    </ul>
-                </div>
-                <h3>Certifications
-                    <span class="fa fa-angle-right"></span>
-                </h3>
-                <div class="my-accordion-tab my-accordion-collapsed">
-                    <ul>
-                        <li>
-                            <b class="my-title">TOGAF 9</b> [04.2017]</li>
-                        <li>
-                            <b class="my-title">Oracle Certified Associate</b>, Java SE 8 Programmer [03.2017]</li>
-                        <li>
-                            <b class="my-title">Microsoft Specialist</b>: Programming in HTML5 with JavaScript and CSS3 [09.2016]</li>
-                        <li>
-                            <b class="my-title">Guidewire Specialist Certification</b> - InsuranceSuite 8.0 Integration [11.2015]</li>
-                    </ul>
-                </div>
-            </div>
-        </main>
-        <footer class="my-flex-footer">
-            <a href="https://twitter.com/_mat3e_" class="fa fa-3x fa-twitter"></a>
-            <a href="https://www.linkedin.com/in/mateusz-chrzonstowski/" class="fa fa-3x fa-linkedin-square"></a>&nbsp;
-        </footer>
-    </article>
-    <a href="https://github.com/mat3e">
-        <img style="position: absolute; top: 0; left: 0; border: 0;" src="https://camo.githubusercontent.com/82b228a3648bf44fc1163ef44c62fcc60081495e/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f6c6566745f7265645f6161303030302e706e67"
-            alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_left_red_aa0000.png">
-    </a>
-
+    <main>
+        <ul class="t-no-bullets t-li-centered t-no-padding buttons">
+            <li class="green button t-coral-hover txt-white big-txt" data-route="courses">Kursy <img src="udemy.svg"
+                    style="height: 1em; vertical-align: middle"></li>
+            <!-- opis każdego kursu -->
+            <!-- <li class="blue button t-coral-hover txt-white big-txt">Blog</li> -->
+            <li class="aqua button t-coral-hover txt-white big-txt" data-route="talks">Wystąpienia</li>
+            <!-- z /talks -->
+            <!-- <li class="yellow button t-coral-hover txt-white big-txt" data-route="oss">Open Source</li> -->
+            <li class="red button t-coral-hover txt-white big-txt" data-route="about">O mnie</li>
+            <!-- <li class="magenta button t-coral-hover txt-white big-txt" data-route="podcast">Podcast</li> -->
+            <li data-route="courses" class="txt-white big-txt content">
+                <m3-my-courses></m3-my-courses>
+            </li>
+            <li data-route="talks">
+                <p class="t-p-05 t-fs-11 t-fb t-bg-fff9" style="max-width: 40rem; margin: 0 auto; box-sizing: border-box">
+                    Szukasz prelegenta? Skontaktuj się ze mną na
+                    <a href="https://www.linkedin.com/in/mateusz-chrzonstowski" title="https://www.linkedin.com/in/mateusz-chrzonstowski"
+                        alt="https://www.linkedin.com/in/mateusz-chrzonstowski" class="txt-white t-coral-hover" style="text-decoration: none">
+                        <i class="fab fa-linkedin"></i>
+                    </a> i coś uradzimy :) Większość wymienionych tu prezentacji mogę powtórzyć praktycznie "od ręki".
+                </p>
+            </li>
+            <li data-route="talks" class="content content-smaller">
+                <m3-my-talks></m3-my-talks>
+            </li>
+            <li data-route="about" class="content">
+                <section class="t-bg-fff9 t-p-05 t-fb">
+                    <p class="t-fs-11">
+                        Pomagam ludziom osiągać lepsze efekty, wytwarzając oprogramowanie oraz dzieląc się wiedzą o
+                        tym, jak należy programować. Łączę inżynierskie spojrzenie z uśmiechem i dostrzeganiem
+                        pierwiastka ludzkiego w sofcie.
+                    </p>
+                    <p>
+                        Początkowo byłem nastawiony na front-end, ostatnie lata działałem w obszarze integracji
+                        systemów, a tak naprawdę jestem inżynierem oprogramowania i programistą full-stack. Od 2013
+                        roku zarabiam na życie kodem. Dodatkowo, jestem trenerem w jednej ze szkół programowania.
+                    </p>
+                    <p>
+                        Do tej pory wystąpiłem podczas meetupów, targów i konferencji: Confitura, Codepot, Angular
+                        Warsaw, Warszawskie Dni Informatyki, JS Poland, Lublin Startup Festival, IT Akademia j-labs.
+                    </p>
+                    <p>
+                        Oprócz programowania i dzielenia się wiedzą, pasjonuję się jeszcze MMA, Dragon Ballem i
+                        strategiami wielkich firm.
+                    </p>
+                </section>
+            </li>
+            <li class="txt-white big-txt">
+                <ul class="t-no-bullets t-li-inline t-no-padding links">
+                    <li>
+                        <a href="https://www.linkedin.com/in/mateusz-chrzonstowski" title="https://www.linkedin.com/in/mateusz-chrzonstowski"
+                            alt="https://www.linkedin.com/in/mateusz-chrzonstowski" class="txt-white t-coral-hover">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://twitter.com/_mat3e_" title="https://twitter.com/_mat3e_" alt="https://twitter.com/_mat3e_"
+                            class="txt-white t-coral-hover">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/mat3e" title="https://github.com/mat3e" alt="https://github.com/mat3e"
+                            class="txt-white t-coral-hover">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://medium.com/@mat3e" title="https://medium.com/@mat3e" alt="https://medium.com/@mat3e"
+                            class="txt-white t-coral-hover">
+                            <i class="fab fa-medium"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.reddit.com/user/_mat3e_" title="https://www.reddit.com/user/_mat3e_" alt="https://www.reddit.com/user/_mat3e_"
+                            class="txt-white t-coral-hover">
+                            <i class="fab fa-reddit"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://stackoverflow.com/users/4774651/mat3e" title="https://stackoverflow.com/users/4774651/mat3e"
+                            alt="https://stackoverflow.com/users/4774651/mat3e" class="txt-white t-coral-hover">
+                            <i class="fab fa-stack-overflow"></i>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </main>
     <script>
         (function () {
-            const accordionHeaders = [];
-
-            // collecting the headers
-            const kids = document.getElementsByClassName('my-accordion')[0].children;
-            for (let i = 0; i < kids.length; ++i) {
-                let kid = kids[i];
-
-                if (kid.tagName === 'H3') {
-                    accordionHeaders.push(kid);
+            initRouting();
+            document.querySelectorAll('.button')
+                .forEach(b => {
+                    b.addEventListener('click', () => {
+                        changeRoute(b.dataset.route);
+                    });
+                });
+            function initRouting() {
+                changeRoute();
+                window.addEventListener('hashchange', (e) => changeRoute());
+            }
+            function changeRoute(route = location.hash.substr(1)) {
+                resetVisibility();
+                location.hash = route;
+                if (route) {
+                    document.querySelectorAll('[data-route]')
+                        .forEach(elem => {
+                            elem.style.display = 'none';
+                            if (elem.dataset.route === route) {
+                                elem.style.display = 'inherit';
+                            }
+                        });
                 }
             }
-
-            // adding accordion functionality for headers
-            accordionHeaders.forEach((header) => {
-                header.addEventListener('click', () => {
-                    const span = header.firstElementChild;
-                    let wasExpanded = false;
-                    if (span.className === 'fa fa-angle-down') {
-                        wasExpanded = true;
-                    }
-
-                    accordionHeaders.forEach((otherHeader) => {
-                        otherHeader.firstElementChild.className = 'fa fa-angle-right';
-                        otherHeader.nextElementSibling.className = 'my-accordion-tab my-accordion-collapsed';
-                        otherHeader.className = '';
+            function resetVisibility() {
+                document.querySelectorAll('.button[data-route]')
+                    .forEach(elem => {
+                        elem.style.display = 'inherit';
                     });
-
-                    if (!wasExpanded) {
-                        location.hash = accordionHeaders.indexOf(header);
-                        span.className = 'fa fa-angle-down';
-                        header.nextElementSibling.className = 'my-accordion-tab';
-                        header.className = 'my-yellow';
-                    }
-                });
-            });
-
-            // comeback to the page
-            let tabId = location.hash;
-            if (tabId) {
-                accordionHeaders[+tabId.substring(1)].dispatchEvent(new MouseEvent('click', {
-                    'view': window,
-                    'bubbles': true,
-                    'cancelable': false
-                }));
+                document.querySelectorAll(':not(.button)[data-route]')
+                    .forEach(elem => {
+                        elem.style.display = 'none';
+                    });
             }
+            customElements.define('m3-youtube', class extends HTMLElement {
+                constructor() {
+                    super();
+                    const videoId = this.getAttribute('video');
+                    this.innerHTML = `
+                    <iframe 
+                        width="336" 
+                        height="189" 
+                        src="https://www.youtube.com/embed/${videoId}" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                    </iframe>
+                `;
+                }
+            });
+            customElements.define('m3-course', class extends HTMLElement {
+                constructor() {
+                    super();
+                    const courseUrl = this.getAttribute('url');
+                    const videoId = this.getAttribute('video');
+                    const courseTitle = this.getAttribute('title');
+                    const courseLang = this.getAttribute('lang');
+                    this.innerHTML = `
+                        <article style="text-align: center">
+                            <h2 style="margin-top: .5em; margin-bottom: 0">
+                                <a href="${courseUrl}" style="text-decoration: none" class="txt-white t-coral-hover">
+                                    ${courseTitle}
+                                </a>
+                                ${courseLang}
+                            </h2>
+                            <m3-youtube video="${videoId}"></m3-youtube>
+                        </article>
+                    `;
+                }
+            });
+            customElements.define('m3-my-courses', class extends HTMLElement {
+                constructor() {
+                    super();
+                    this.innerHTML = `
+                        <section class="t-bg-fff9 t-p-05">
+                            <m3-course
+                                title="Fajny JavaScript"
+                                video="_2C_bJWStA4"
+                                url="https://www.udemy.com/fajny-javascript/?couponCode=OPENALL"
+                                lang="🇵🇱">
+                            </m3-course>
+                        </section>
+                    `;
+                }
+            });
+            customElements.define('m3-my-talks', class extends HTMLElement {
+                constructor() {
+                    super();
+                    this.innerHTML = `
+                        <section class="t-bg-fff9 t-p-05">
+                            <mark-down id="talks"></mark-down>
+                        </section>
+                        <style>
+                            mark-down ul {
+                                padding-left: 1em;
+                            }
+
+                            mark-down ul a {
+                                text-decoration: none;
+                                font-size: 1.5em;
+                                vertical-align: middle;
+                                line-height: 1;
+                            }
+                        </style>
+                    `;
+                    this.render();
+                }
+
+                async render() {
+                    const resp = await fetch('https://raw.githubusercontent.com/mat3e/talks/master/README.md');
+                    if (resp.ok) {
+                        this.querySelector('#talks').innerHTML = await resp.text();
+                    }
+                }
+            });
         })();
     </script>
+    <script src="https://unpkg.com/markdown-element@2.0.2/dist/markdown-element.min.js"></script>
 </body>
 
 </html>
