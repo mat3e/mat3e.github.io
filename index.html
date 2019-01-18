@@ -62,8 +62,8 @@
             font-weight: bold;
         }
 
-        .t-p-05 {
-            padding: .5rem;
+        .t-p-1 {
+            padding: 1rem;
         }
 
         /* colors */
@@ -121,14 +121,8 @@
         }
 
         .content {
-            max-width: 40rem;
-            max-height: 20rem;
             overflow: auto;
             margin: 0 auto;
-        }
-
-        .content.content-smaller {
-            max-height: 14rem;
         }
 
         .links {
@@ -142,14 +136,6 @@
                 margin-top: 1em;
             }
 
-            .content {
-                max-height: 30rem;
-            }
-
-            .content.content-smaller {
-                max-height: 25rem;
-            }
-
             .links {
                 position: absolute;
                 bottom: .25em;
@@ -160,14 +146,6 @@
         @media screen and (min-device-height: 40em) {
             .buttons {
                 margin-top: 3em;
-            }
-
-            .content {
-                max-height: 35rem;
-            }
-
-            .content.content-smaller {
-                max-height: 31rem;
             }
         }
 
@@ -192,39 +170,11 @@
             .button:hover {
                 cursor: pointer;
             }
+
+            .content {
+                max-width: 50rem;
+            }
         }
-
-        /* 
-
-        main {
-            background: url('bg.jpg');
-            background-size: cover;
-            width: 80%;
-            height: 90vh;
-            margin: 0 auto;
-            overflow: scroll;
-        }
-
-        main nav {
-            float: right;
-            margin-right: 2em;
-        }
-
-        .button {
-            font-size: 2em;
-            border: 3px solid black;
-            border-radius: 20%;
-            max-width: 10em;
-            text-align: center;
-            padding: 0.5em;
-            text-transform: uppercase;
-            font-weight: bold;
-            font-family: Helvetica, sans-serif;
-            color: #fff;
-            margin-bottom: .25em;
-            text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-            list-style-type: none;
-        }*/
     </style>
 </head>
 
@@ -244,19 +194,19 @@
                 <m3-my-courses></m3-my-courses>
             </li>
             <li data-route="talks">
-                <p class="t-p-05 t-fs-11 t-fb t-bg-fff" style="max-width: 40rem; margin: 0 auto; box-sizing: border-box">
+                <p class="t-p-1 t-fs-11 t-fb t-bg-fff" style="text-align: center">
                     Szukasz prelegenta? Skontaktuj się ze mną na
                     <a href="https://www.linkedin.com/in/mateusz-chrzonstowski" title="https://www.linkedin.com/in/mateusz-chrzonstowski"
-                        alt="https://www.linkedin.com/in/mateusz-chrzonstowski" class="txt-white t-coral-hover" style="text-decoration: none">
-                        <i class="fab fa-linkedin"></i>
+                        alt="https://www.linkedin.com/in/mateusz-chrzonstowski" class="t-coral-hover" style="text-decoration: none">
+                        <strong>LinkedIn</strong>
                     </a> i coś uradzimy :) Większość wymienionych tu prezentacji mogę powtórzyć praktycznie "od ręki".
                 </p>
             </li>
-            <li data-route="talks" class="content content-smaller">
+            <li data-route="talks" class="content">
                 <m3-my-talks></m3-my-talks>
             </li>
             <li data-route="about" class="content">
-                <section class="t-bg-fff t-p-05 t-fb">
+                <section class="t-bg-fff t-p-1 t-fb">
                     <p class="t-fs-11">
                         Pomagam ludziom osiągać lepsze efekty, wytwarzając oprogramowanie oraz dzieląc się wiedzą o
                         tym, jak należy programować. Łączę inżynierskie spojrzenie z uśmiechem i dostrzeganiem
@@ -361,8 +311,8 @@
                     const videoId = this.getAttribute('video');
                     this.innerHTML = `
                     <iframe 
-                        width="336" 
-                        height="189" 
+                        width="504" 
+                        height="284" 
                         src="https://www.youtube.com/embed/${videoId}" 
                         frameborder="0" 
                         allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
@@ -395,7 +345,7 @@
                 constructor() {
                     super();
                     this.innerHTML = `
-                        <section class="t-bg-fff t-p-05">
+                        <section class="t-bg-fff t-p-1">
                             <m3-course
                                 title="Fajny JavaScript"
                                 video="_2C_bJWStA4"
@@ -410,14 +360,13 @@
                 constructor() {
                     super();
                     this.innerHTML = `
-                        <section class="t-bg-fff t-p-05">
+                        <section class="t-bg-fff t-p-1">
                             <mark-down id="talks"></mark-down>
                         </section>
                         <style>
-                            mark-down ul {
-                                padding-left: 1em;
+                            mark-down h2 {
+                                margin-bottom: 0;
                             }
-
                             mark-down ul a {
                                 text-decoration: none;
                                 font-size: 1.5em;
