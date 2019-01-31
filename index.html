@@ -175,12 +175,13 @@
 <body>
     <main>
         <ul class="t-no-bullets t-li-centered t-no-padding buttons">
+            <li data-route="courses talks about" class="big-txt">
+                <a href="#" style="text-decoration: none">🏠</a>
+            </li>
             <li class="green button t-coral-hover txt-white big-txt" data-route="courses">Kursy <img src="udemy.svg"
                     style="height: 1em; vertical-align: middle"></li>
-            <!-- opis każdego kursu -->
             <!-- <li class="blue button t-coral-hover txt-white big-txt">Blog</li> -->
             <li class="aqua button t-coral-hover txt-white big-txt" data-route="talks">Wystąpienia</li>
-            <!-- z /talks -->
             <!-- <li class="yellow button t-coral-hover txt-white big-txt" data-route="oss">Open Source</li> -->
             <li class="red button t-coral-hover txt-white big-txt" data-route="about">O mnie</li>
             <!-- <li class="magenta button t-coral-hover txt-white big-txt" data-route="podcast">Podcast</li> -->
@@ -283,7 +284,7 @@
                     document.querySelectorAll('[data-route]')
                         .forEach(elem => {
                             elem.style.display = 'none';
-                            if (elem.dataset.route === route) {
+                            if (elem.dataset.route.split(' ').includes(route)) {
                                 elem.style.display = 'inherit';
                             }
                         });
@@ -322,6 +323,7 @@
                     const videoId = this.getAttribute('video');
                     const courseTitle = this.getAttribute('title');
                     const courseLang = this.getAttribute('lang');
+                    const price = this.getAttribute('price');
                     this.innerHTML = `
                         <article style="text-align: center">
                             <h2 style="margin-top: .5em; margin-bottom: 0">
@@ -331,6 +333,9 @@
                                 ${courseLang}
                             </h2>
                             <m3-youtube video="${videoId}"></m3-youtube>
+                            <a href="${courseUrl}" style="text-decoration: none; display: block;" class="txt-white t-coral-hover">
+                                Kup teraz za ${price}!
+                            </a>
                         </article>
                     `;
                 }
@@ -344,7 +349,8 @@
                                 title="Fajny JavaScript"
                                 video="_2C_bJWStA4"
                                 url="https://www.udemy.com/fajny-javascript/?couponCode=OPENALL"
-                                lang="🇵🇱">
+                                lang="🇵🇱"
+                                price="35 zł">
                             </m3-course>
                         </section>
                     `;
