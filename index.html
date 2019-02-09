@@ -333,7 +333,7 @@
                                 ${courseLang}
                             </h2>
                             <m3-youtube video="${videoId}"></m3-youtube>
-                            <a href="${courseUrl}" style="text-decoration: none; display: block;" class="txt-white t-coral-hover">
+                            <a href="${courseUrl}" style="text-decoration: none; display: block;" class="t-coral-hover">
                                 Kup teraz za ${price}!
                             </a>
                         </article>
@@ -364,6 +364,9 @@
                             <mark-down id="talks"></mark-down>
                         </section>
                         <style>
+                            mark-down h2:first-of-type {
+                                margin-top: 0;
+                            }
                             mark-down h2 {
                                 margin-bottom: 0;
                             }
