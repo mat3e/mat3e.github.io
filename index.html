@@ -325,6 +325,7 @@
                     super();
                     const courseUrl = this.getAttribute('url');
                     const videoId = this.getAttribute('video');
+                    const img = this.getAttribute('img');
                     const courseTitle = this.getAttribute('title');
                     const courseLang = this.getAttribute('lang');
                     const price = this.getAttribute('price');
@@ -339,7 +340,7 @@
                             <a href="${courseUrl}" style="text-decoration: none; display: block;" class="t-coral-hover">
                                 [Kup teraz za ${price}]
                             </a>
-                            ${videoId ? `<m3-youtube video="${videoId}"></m3-youtube>` : ''}
+                            ${videoId ? `<m3-youtube video="${videoId}"></m3-youtube>` : (img ? `<img src="${img}" alt="Course logo">` : '')}
                         </article>
                     `;
                 }
@@ -358,24 +359,28 @@
                             </m3-course>
                             <m3-course
                                 title="Java - ambitny start. Zbuduj aplikację!"
+                                img="https://i.udemycdn.com/course/480x270/2258172_16f7.jpg"
                                 url="https://www.udemy.com/java-ambitny-start/?couponCode=OPENALL"
                                 lang="🇵🇱"
                                 price="35 zł">
                             </m3-course>
                             <m3-course
                                 title="Front-end dla back-endowców"
+                                img="https://i.udemycdn.com/course/480x270/2135176_d5b1.jpg"
                                 url="https://www.udemy.com/fe4be-pl/?couponCode=OPENALL"
                                 lang="🇵🇱"
                                 price="35 zł">
                             </m3-course>
                             <m3-course
                                 title="Java - ambitious start. Create a real app!"
+                                img="https://i.udemycdn.com/course/480x270/2265978_06dd.jpg"
                                 url="https://www.udemy.com/java-ambitious-start/?couponCode=OPENALL"
                                 lang="🇺🇸"
                                 price="10 $">
                             </m3-course>
                             <m3-course
                                 title="Front-end for back-end developers"
+                                img="https://i.udemycdn.com/course/480x270/2151724_eea9.jpg"
                                 url="https://www.udemy.com/fe4be-en/?couponCode=OPENALL"
                                 lang="🇺🇸"
                                 price="10 $">
