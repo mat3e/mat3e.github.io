@@ -337,10 +337,10 @@
                                 </a>
                                 ${courseLang}
                             </h3>
-                            <a href="${courseUrl}" style="text-decoration: none; display: block;" class="t-coral-hover">
+                            <a href="${courseUrl}" style="text-decoration: none; display: block; font-size: .75em" class="t-coral-hover">
                                 [Kup teraz za ${price}]
                             </a>
-                            ${videoId ? `<m3-youtube video="${videoId}"></m3-youtube>` : (img ? `<img src="${img}" alt="Course logo">` : '')}
+                            ${videoId ? `<m3-youtube video="${videoId}"></m3-youtube>` : (img ? `<a href="${courseUrl}"><img src="${img}" alt="Course logo"></a>` : '')}
                         </article>
                     `;
                 }
@@ -348,6 +348,7 @@
             customElements.define('m3-my-courses', class extends HTMLElement {
                 constructor() {
                     super();
+                    // Udemy API?
                     this.innerHTML = `
                         <section class="t-bg-fff t-p-1">
                             <m3-course
@@ -357,6 +358,7 @@
                                 lang="🇵🇱"
                                 price="35 zł">
                             </m3-course>
+                            <hr>
                             <m3-course
                                 title="Java - ambitny start. Zbuduj aplikację!"
                                 img="https://i.udemycdn.com/course/480x270/2258172_16f7.jpg"
@@ -364,6 +366,7 @@
                                 lang="🇵🇱"
                                 price="35 zł">
                             </m3-course>
+                            <hr>
                             <m3-course
                                 title="Front-end dla back-endowców"
                                 img="https://i.udemycdn.com/course/480x270/2135176_d5b1.jpg"
@@ -371,6 +374,7 @@
                                 lang="🇵🇱"
                                 price="35 zł">
                             </m3-course>
+                            <hr>
                             <m3-course
                                 title="Java - ambitious start. Create a real app!"
                                 img="https://i.udemycdn.com/course/480x270/2265978_06dd.jpg"
@@ -378,6 +382,7 @@
                                 lang="🇺🇸"
                                 price="10 $">
                             </m3-course>
+                            <hr>
                             <m3-course
                                 title="Front-end for back-end developers"
                                 img="https://i.udemycdn.com/course/480x270/2151724_eea9.jpg"
