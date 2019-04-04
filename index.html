@@ -339,7 +339,7 @@
                             <a href="${courseUrl}" style="text-decoration: none; display: block;" class="t-coral-hover">
                                 [Kup teraz za ${price}]
                             </a>
-                            <m3-youtube video="${videoId}"></m3-youtube>
+                            ${videoId ? `<m3-youtube video="${videoId}"></m3-youtube>` : ''}
                         </article>
                     `;
                 }
