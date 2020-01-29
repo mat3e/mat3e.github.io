@@ -8,10 +8,9 @@
 
     <title>Mateusz Chrzonstowski - Software Engineer, IT Trainer, IT Showman</title>
 
-    <link rel="stylesheet" href="https://unpkg.com/@fortawesome/fontawesome-free/css/fontawesome.min.css">
-    </link>
-    <link rel="stylesheet" href="https://unpkg.com/@fortawesome/fontawesome-free/css/brands.min.css">
-    </link>
+    <link rel="stylesheet" href="https://unpkg.com/@fortawesome/fontawesome-free/css/fontawesome.min.css"></link>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:500&display=swap" rel="stylesheet"></link>
+    <link rel="stylesheet" href="https://unpkg.com/@fortawesome/fontawesome-free/css/brands.min.css"></link>
 
     <style>
         :root {
@@ -20,15 +19,42 @@
 
         body {
             margin: 0;
-            font-family: Helvetica, sans-serif;
+            font-family: 'Montserrat', sans-serif;
             overscroll-behavior-y: contain;
         }
 
         main {
-            background: url('img/bg.jpg');
-            background-size: cover;
-            overflow: scroll;
+            background-color: #000;
             height: 100vh;
+            overflow: auto;
+        }
+
+        main::before {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-image: url('img/bg.jpg');
+            background-position: center;
+            background-size: cover;
+            width: 100%;
+            height: 100%;
+            opacity: 0.16;
+            pointer-events: none;
+        }
+
+        #talks h2 {
+            margin-bottom: 10px;
+            margin-left: 24px;
+            margin-right: 24px;
+            padding-bottom: 10px;
+            letter-spacing: 2px;
+            border-bottom: 2px solid #000;
+        }
+
+        #talks ul li {
+            margin-bottom: 10px;
         }
 
         /* technical */
@@ -51,7 +77,13 @@
         }
 
         .t-bg-fff {
-            background: rgba(255, 255, 255, var(--bg-transparency))
+            position: relative;
+            background-color: #fff;
+            z-index: 1;
+        }
+
+        .margin-bottom {
+            margin-bottom: 100px !important;
         }
 
         .t-fs-11 {
@@ -59,69 +91,39 @@
         }
 
         .t-fb {
-            font-weight: bold;
+            /* font-weight: bold; */
         }
 
         .t-p-1 {
             padding: 1rem;
         }
 
-        /* colors */
-
-        .red {
-            background-color: rgba(255, 0, 0, var(--bg-transparency));
-        }
-
-        .green {
-            background-color: rgba(0, 255, 0, var(--bg-transparency));
-        }
-
-        .blue {
-            background-color: rgba(0, 0, 255, var(--bg-transparency));
-        }
-
-        .yellow {
-            background-color: rgba(255, 255, 0, var(--bg-transparency));
-        }
-
-        .aqua {
-            background-color: rgba(0, 255, 255, var(--bg-transparency));
-        }
-
-        .magenta {
-            background-color: rgba(255, 0, 255, var(--bg-transparency));
-        }
-
-        .white {
-            background-color: rgba(255, 255, 255, var(--bg-transparency));
-        }
-
-        .txt-white {
-            color: white;
-            text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-        }
-
         /* business */
 
         .big-txt {
-            font-size: 2em;
+            font-size: 1.4em;
             text-align: center;
             text-transform: uppercase;
-            font-weight: bold;
             line-height: 1;
         }
 
         .buttons {
-            margin-top: .2em;
+            padding-top: .2em;
             margin-bottom: 0;
         }
 
         .button {
-            border: 3px solid black;
-            border-radius: 20%;
+            background-color: #fff;
             padding: .5em;
-            max-width: 10em;
+            max-width: 400px;
             margin-bottom: .25em;
+            transform: scale(1);
+            transition: transform 0.2s ease;
+        }
+
+        .button:hover {
+            transform: scale(1.1);
+            transition: transform 0.2s ease;
         }
 
         .content {
@@ -131,6 +133,24 @@
 
         .links {
             font-size: 1.5em;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        .fab {
+            margin-left: 10px;
+            margin-right: 10px;
+            color: #fff;
+            font-size: 34px;
+            transform: scale(1);
+            transition: transform 0.2s ease;
+        }
+
+        .fab:hover {
+            transform: scale(1.1);
+            transition: transform 0.2s ease;
+            color: #f2f2f2;
+            transition: color 0.2s ease;
         }
 
         /* portrait */
@@ -149,7 +169,8 @@
 
         @media screen and (min-device-height: 40em) {
             .buttons {
-                margin-top: 3em;
+                margin-top: 0;
+                padding-top: 3em;
             }
         }
 
@@ -160,7 +181,7 @@
             /* technical */
 
             .t-coral-hover:hover {
-                color: coral;
+                color: #0066ff;
             }
 
             /* business */
@@ -179,23 +200,35 @@
 <body>
     <main>
         <ul class="t-no-bullets t-li-centered t-no-padding buttons">
-            <li data-route="courses talks about" class="big-txt">
+            <li data-route="courses talks about" class="big-txt" style="margin-bottom: 20px;">
                 <a href="#" style="text-decoration: none; border: solid 10px white; border-radius: 50%; background-color: white;">🔙</a>
             </li>
             <!-- <li class="green button t-coral-hover txt-white big-txt" data-route="courses">Kursy <img src="img/udemy.svg"
                     style="height: 1em; vertical-align: middle"></li> -->
             <!-- <li class="blue button t-coral-hover txt-white big-txt">Blog</li> -->
-            <li class="red button t-coral-hover txt-white big-txt" data-route="about">O mnie</li>
-            <li class="aqua button t-coral-hover txt-white big-txt" data-route="talks">Wystąpienia</li>
+            <li class="button t-coral-hover txt-white big-txt" data-route="about">
+                O mnie
+            </li>
+            <li class="button t-coral-hover txt-white big-txt" data-route="talks">
+                Wystąpienia
+            </li>
             <!-- <li class="yellow button t-coral-hover txt-white big-txt" data-route="oss">Open Source</li> -->
             <!-- <li class="magenta button t-coral-hover txt-white big-txt" data-route="podcast">Podcast</li> -->
-            <li class="white button t-coral-hover txt-white big-txt" data-route="">
+            <li class="button t-coral-hover txt-white big-txt" data-route="">
                 <a href="https://www.udemy.com/user/mateusz-chrzonstowski/" style="text-decoration: none;">
                     <img src="img/udemy.svg" style="height: 1em; vertical-align: middle">
                 </a>
             </li>
-            <li class="white button t-coral-hover txt-white big-txt" data-route=""><a href="https://mat3e.github.io/trendy/" style="text-decoration: none;">Mailing + PDF 🇵🇱</a></li>
-            <li class="white button t-coral-hover txt-white big-txt" data-route=""><a href="https://mat3e.github.io/trends/" style="text-decoration: none;">Mailing + PDF 🇺🇸</a></li>
+            <li class="button t-coral-hover txt-white big-txt" data-route="">
+                <a href="https://mat3e.github.io/trendy/" style="text-decoration: none;">
+                    Mailing + PDF 🇵🇱
+                </a>
+            </li>
+            <li class="button t-coral-hover txt-white big-txt" data-route="">
+                <a href="https://mat3e.github.io/trends/" style="text-decoration: none;">
+                    Mailing + PDF 🇺🇸
+                </a>
+            </li>
             <li data-route="courses" class="txt-white big-txt content">
                 <m3-my-courses></m3-my-courses>
             </li>
@@ -208,7 +241,7 @@
                     </a> i coś uradzimy :) Większość wymienionych tu prezentacji mogę powtórzyć praktycznie "od ręki".
                 </p>
             </li>
-            <li data-route="talks" class="content">
+            <li data-route="talks" class="content margin-bottom">
                 <m3-my-talks></m3-my-talks>
             </li>
             <li data-route="about" class="content">
